@@ -40,7 +40,7 @@ for(r = 0; r<INTER; r++){
 /*  printf("Plan rouge du premier bloc 8x8 :\n"); */
   for (j = 0; j < ny; j++) {       /* ligne par ligne */
     for (i = 0; i < nx; i++) {   /* pixel par pixel */
-      /*remplir hist[r][g][b]*/
+      
     }
   }
   /*------------------------------------------------*/
