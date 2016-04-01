@@ -1,13 +1,12 @@
 #!/bin/bash
 
-cc rdjpeg.c offline.c -o offline
+cc rdjpeg.c read_image.c -o read_image
+cc rdjpeg.c calculate_dist.c -o calculate_dist
 
-cat test/test.txt | while read line
+cat test/img.txt | while read line
 do
-   #$input="img/$line.jpg";
-   #$output="histogrammes/hist_$line.bin";
-   ./offline img/$line.jpg histogrammes/hist_$line.bin;
+   ./read_image img/$line.jpg histogrammes/$line.bin;
 done
-cat histogrammes/*.bin > hist.bin
-
+cat histogrammes/*.bin >> hist.bin
+./calculate_dist $1 hist.bin
 
